@@ -1,0 +1,32 @@
+{
+  "name": "tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node scripts/esbuild.dev.js data-structure -f global"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maolovecoding/tools.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maolovecoding/tools/issues"
+  },
+  "homepage": "https://github.com/maolovecoding/tools#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-json": "^5.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "esbuild": "^0.15.15",
+    "execa": "4",
+    "minimist": "^1.2.7",
+    "rollup": "^3.4.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "typescript": "^4.9.3"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@tools/data-structure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "dist/data-structure.esm-bundler.js",
+  "buildOptions": {
+      "name": "ToolsDataStructure",
+      "formats": [
+          "esm-bundler",
+          "cjs",
+          "global"
+      ]
+  }
+}

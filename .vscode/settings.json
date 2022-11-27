@@ -1,0 +1,7 @@
+{
+  "cSpell.words": [
+    "nexts"
+  ],
+  "vitest.enable": true,
+  "testing.automaticallyOpenPeekView": "never",
+}

@@ -1,10 +1,10 @@
 {
-  "name": "@tools/data-structure",
+  "name": "@tools/leetcode",
   "version": "1.0.0",
   "main": "./src/index.js",
   "module": "dist/data-structure.esm-bundler.js",
   "buildOptions": {
-      "name": "ToolsDataStructure",
+      "name": "ToolsLeetcode",
       "formats": [
           "esm-bundler",
           "cjs",

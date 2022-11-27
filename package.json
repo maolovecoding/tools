@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "dev": "node scripts/esbuild.dev.js data-structure -f global"
   },
   "repository": {
@@ -27,6 +27,8 @@
     "minimist": "^1.2.7",
     "rollup": "^3.4.0",
     "rollup-plugin-typescript2": "^0.34.1",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4",
+    "vitest": "^0.25.3"
   }
 }

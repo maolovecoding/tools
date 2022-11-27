@@ -100,7 +100,7 @@
     "sourceMap": true, // 采用sourcemap
     "module": "esnext", // 模块格式
     "moduleResolution": "node", // 模块解析方式
-    "strict": false, // 严格模式
+    "strict": true, // 严格模式
     "resolveJsonModule": true, // 解析json模块
     "esModuleInterop": true, // 允许通过es6语法引入commonjs模块
     "jsx": "preserve", // jsx 不转义

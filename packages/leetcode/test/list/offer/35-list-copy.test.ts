@@ -30,7 +30,7 @@ test("剑指offer35. 复杂链表的复制", () => {
   const resNode3 = resNode2?.next;
   const resNode4 = resNode3?.next;
   expect(resHead?.val).toEqual(head.val)
-  console.log(res?.val, head.val)
-  console.log(resNode4?.val)
-  console.log(resNode1?.random?.val)
+  // console.log(res?.val, head.val)
+  // console.log(resNode4?.val)
+  // console.log(resNode1?.random?.val)
 });

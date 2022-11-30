@@ -1,1 +1,1 @@
-console.log(1)
+export { UnionSet } from "./union-set";

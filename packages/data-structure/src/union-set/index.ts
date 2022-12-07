@@ -24,31 +24,37 @@ class UnionSet<T> {
       this.sizeMap.set(node, 1);
     }
   }
-  private findFather(node: Node<T>) {
+  private findFather(node: T) {
+    let curr = this.nodes.get(node)!;
     const path: Node<T>[] = [];
     // 一直往上查 找到根父亲
-    while (node !== this.parents.get(node)) {
-      path.push(node);
-      node = this.parents.get(node)!;
+    while (curr !== this.parents.get(curr)) {
+      path.push(curr);
+      curr = this.parents.get(curr)!;
     }
     while (path.length) {
-      this.parents.set(path.pop()!, node);
+      this.parents.set(path.pop()!, curr);
     }
-    return node;
+    return curr;
+  }
+  find(node: T) {
+    let curr = this.nodes.get(node)!;
+    // 一直往上查 找到根父亲
+    while (curr !== this.parents.get(curr)) {
+      curr = this.parents.get(curr)!;
+    }
+    return curr.value;
   }
   isSameSet(a: T, b: T) {
     if (!this.nodes.has(a) || !this.nodes.has(b)) {
       return false;
     }
-    return (
-      this.findFather(this.nodes.get(a)!) ===
-      this.findFather(this.nodes.get(b)!)
-    );
+    return this.findFather(a) === this.findFather(b);
   }
   union(a: T, b: T) {
     if (!this.nodes.has(a) || !this.nodes.has(b)) return;
-    let aHead = this.findFather(this.nodes.get(a)!);
-    let bHead = this.findFather(this.nodes.get(b)!);
+    let aHead = this.findFather(a);
+    let bHead = this.findFather(b);
     // 不是一个集合 需要union
     if (aHead !== bHead) {
       const aSize = this.sizeMap.get(aHead)!;
@@ -58,15 +64,6 @@ class UnionSet<T> {
       this.parents.set(small, big);
       this.sizeMap.set(big, aSize + bSize);
       this.sizeMap.delete(small);
-      // if (aSize >= bSize) {
-      //   this.parents.set(bHead, aHead);
-      //   this.sizeMap.set(aHead, aSize + bSize);
-      //   this.sizeMap.delete(bHead);
-      // } else {
-      //   this.parents.set(aHead, bHead);
-      //   this.sizeMap.set(bHead, aSize + bSize);
-      //   this.sizeMap.delete(aHead);
-      // }
     }
   }
 }

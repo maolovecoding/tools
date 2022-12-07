@@ -10,4 +10,5 @@ test("UnionSet", () => {
   expect(union.isSameSet(3, 2)).toBe(true)
   expect(union.isSameSet(3, 1)).toBe(true)
   expect(union.sizeMap.size).toBe(2)
+  expect(union.find(1)).toBe(1)
 });
